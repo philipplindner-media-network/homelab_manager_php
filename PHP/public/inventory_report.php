@@ -81,7 +81,7 @@ $cables = $db->resultset();
 
     <div class="cover-page">
         <h1>Homelab-Inventar-Dokumentation</h1>
-        <p>Erstellt von: <strong>Philipp Lindner</strong></p>
+        <p>Erstellt von: <strong>- Your Name -</strong></p>
         <p>Stand: <strong><?= date('d.m.Y'); ?></strong></p>
     </div>
 
