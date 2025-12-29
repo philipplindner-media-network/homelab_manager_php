@@ -1,0 +1,458 @@
+/* General Body and Font */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #2c3e50; /* Dark blue-grey background */
+    color: #ecf0f1; /* Light text color */
+    line-height: 1.6;
+}
+
+/* Header */
+header {
+    background-color: #34495e; /* Slightly darker header */
+    color: #fff;
+    padding: 1.2rem 0;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.2em;
+    letter-spacing: 1px;
+}
+
+/* Navigation */
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0 0 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; /* Allows navigation items to wrap on smaller screens */
+}
+
+nav ul li {
+    margin: 0 15px;
+    padding: 5px 0;
+}
+
+nav ul li a {
+    color: #ecf0f1; /* Light text for links */
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #3498db; /* Blue on hover */
+}
+
+/* Main Content Area */
+main {
+    padding: 25px;
+    max-width: 1000px; /* Slightly wider main content */
+    margin: 25px auto;
+    background-color: #3f5870; /* Slightly lighter background for content area */
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+    border-radius: 8px;
+}
+
+/* Headings within Main Content */
+h2, h3 {
+    color: #3498db; /* Blue headings */
+    border-bottom: 1px solid rgba(52, 152, 219, 0.3); /* Light blue border */
+    padding-bottom: 10px;
+    margin-top: 25px;
+    margin-bottom: 20px;
+}
+
+/* Device List / Cards */
+.device-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 25px;
+}
+
+.device-card {
+    background-color: #4a667f; /* Card background */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s ease-in-out;
+}
+
+.device-card:hover {
+    transform: translateY(-5px);
+}
+
+.device-card h3 {
+    margin-top: 0;
+    color: #87ceeb; /* Lighter blue for card titles */
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+.device-card p {
+    margin-bottom: 8px;
+    font-size: 0.95em;
+    color: #bdc3c7; /* Lighter grey for card text */
+}
+
+/* Actions (Buttons/Links) */
+.device-actions a,
+form button {
+    display: inline-block;
+    background-color: #3498db; /* Blue button */
+    color: white;
+    padding: 10px 18px;
+    border-radius: 5px;
+    text-decoration: none;
+    margin-right: 10px;
+    margin-top: 15px;
+    font-size: 1em;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.device-actions a:hover,
+form button:hover {
+    background-color: #2980b9; /* Darker blue on hover */
+    transform: translateY(-2px);
+}
+
+.device-actions a.delete,
+button.delete { /* Assuming you might use a button for delete */
+    background-color: #e74c3c; /* Red for delete */
+}
+
+.device-actions a.delete:hover,
+button.delete:hover {
+    background-color: #c0392b; /* Darker red on hover */
+}
+
+/* Forms */
+form {
+    display: flex;
+    flex-direction: column;
+    background-color: #4a667f; /* Form background */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+form label {
+    margin-top: 15px;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #ecf0f1; /* Light text for labels */
+}
+
+/* Input Fields - Unified Styling */
+form input[type="text"],
+form input[type="date"],
+form input[type="number"],
+form input[type="email"],
+form input[type="password"],
+form textarea,
+form select {
+    padding: 12px;
+    margin-bottom: 18px;
+    border: 1px solid #7f8c8d; /* Grey border */
+    border-radius: 5px;
+    font-size: 1.05em; /* Slightly larger font */
+    background-color: #34495e; /* Darker input background */
+    color: #ecf0f1; /* Light text in inputs */
+    outline: none; /* Remove default focus outline */
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    -webkit-appearance: none; /* Remove default browser styling for select/input */
+    -moz-appearance: none;
+    appearance: none;
+}
+
+form input[type="text"]:focus,
+form input[type="date"]:focus,
+form input[type="number"]:focus,
+form input[type="email"]:focus,
+form input[type="password"]:focus,
+form textarea:focus,
+form select:focus {
+    border-color: #3498db; /* Blue border on focus */
+    box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.4); /* Blue glow on focus */
+}
+
+/* Specific styling for select dropdown arrow for better cross-browser consistency */
+form select {
+    background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23ecf0f1%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13%205.4L146.2%20202.7%2018.8%2074.8a17.6%2017.6%200%200%200-25.2%200%2017.6%2017.6%200%200%200%200%2025.2l130.5%20126.7a17.6%2017.6%200%200%200%2025.2%200L287%2094.6a17.6%2017.6%200%200%200%200-25.2z%22%2F%3E%3C%2Fsvg%3E');
+    background-repeat: no-repeat;
+    background-position: right 10px top 50%;
+    background-size: 16px auto;
+    padding-right: 30px; /* Make space for the arrow */
+}
+
+
+/* Tables */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background-color: #4a667f; /* Table background */
+    border-radius: 8px;
+    overflow: hidden; /* Ensures rounded corners are applied */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+table th, table td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #3f5870; /* Darker border for rows */
+}
+
+table th {
+    background-color: #34495e; /* Header background */
+    color: #ecf0f1;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 0.9em;
+}
+
+table tr:nth-child(even) {
+    background-color: #445b73; /* Slightly different shade for even rows */
+}
+
+table tr:hover {
+    background-color: #55728d; /* Hover effect for rows */
+}
+
+table td a {
+    color: #87ceeb; /* Link color in tables */
+    text-decoration: none;
+}
+
+table td a:hover {
+    text-decoration: underline;
+}
+
+/* Device Detail Sections */
+.device-detail-section {
+    margin-bottom: 25px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid rgba(52, 152, 219, 0.1); /* Lighter border for sections */
+}
+
+.device-detail-section:last-child {
+    border-bottom: none;
+}
+
+.device-detail-section h2, .device-detail-section h3 {
+    color: #3498db;
+    margin-top: 0;
+    padding-bottom: 8px;
+    border-bottom: none; /* Remove border from sub-headings here if present */
+}
+
+.device-detail-section p {
+    margin-bottom: 10px;
+    color: #bdc3c7;
+}
+
+/* QR Code Container */
+.qr-code-container {
+    text-align: center;
+    margin-top: 30px;
+    padding: 20px;
+    background-color: #4a667f;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.qr-code-container img {
+    max-width: 220px; /* Slightly larger QR code */
+    height: auto;
+    border: 5px solid #34495e; /* Darker border around QR */
+    padding: 5px;
+    background-color: #fff;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+.qr-code-container p {
+    color: #ecf0f1;
+}
+
+.qr-code-container a {
+    color: #3498db;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.qr-code-container a:hover {
+    text-decoration: underline;
+}
+
+/* Messages (Success/Error) */
+p[style*="color: green;"],
+p[style*="color: red;"] {
+    padding: 12px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    font-weight: bold;
+    text-align: center;
+}
+
+p[style*="color: green;"] {
+    background-color: #2ecc71; /* Green background for success */
+    color: white !important; /* Override inline style */
+}
+
+p[style*="color: red;"] {
+    background-color: #e74c3c; /* Red background for error */
+    color: white !important; /* Override inline style */
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    margin-top: 30px;
+    background-color: #34495e;
+    color: #ecf0f1;
+    font-size: 0.9em;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        margin: 5px 0;
+    }
+
+    main {
+        padding: 15px;
+        margin: 15px auto;
+    }
+
+    .device-list {
+        grid-template-columns: 1fr; /* Stack cards on small screens */
+    }
+
+    table, thead, tbody, th, td, tr {
+        display: block;
+    }
+
+    /* Hide table headers (but not display: none;, for accessibility) */
+    thead tr {
+        position: absolute;
+        top: -9999px;
+        left: -9999px;
+    }
+
+    table tr {
+        border: 1px solid #3f5870;
+        margin-bottom: 15px;
+        border-radius: 8px;
+        overflow: hidden;
+    }
+
+    table td {
+        border-bottom: 1px solid #3f5870;
+        position: relative;
+        padding-left: 50%; /* Space for the pseudo-element label */
+        text-align: right;
+    }
+
+    table td:last-child {
+        border-bottom: none;
+    }
+
+    table td::before {
+        /*
+        * aria-label will only work in IE8 and up (not IE7).
+        * Use a data-attribute for others.
+        */
+        position: absolute;
+        top: 6px;
+        left: 6px;
+        width: 45%;
+        padding-right: 10px;
+        white-space: nowrap;
+        text-align: left;
+        font-weight: bold;
+        color: #87ceeb; /* Label color for responsive tables */
+    }
+
+    /*
+    Label the data
+    */
+    table td:nth-of-type(1)::before { content: "Name:"; } /* Adjust these for each table */
+    table td:nth-of-type(2)::before { content: "Typ:"; }
+    table td:nth-of-type(3)::before { content: "Von:"; }
+    table td:nth-of-type(4)::before { content: "Zu:"; }
+    table td:nth-of-type(5)::before { content: "Aktionen:"; }
+    /* You'll need to define content for all your table columns */
+}
+
+
+.success-message {
+    padding: 12px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    font-weight: bold;
+    text-align: center;
+    background-color: #2ecc71; /* Green background for success */
+    color: white;
+}
+
+.error-message {
+    padding: 12px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    font-weight: bold;
+    text-align: center;
+    background-color: #e74c3c; /* Red background for error */
+    color: white;
+}
+.device-details { border: 1px solid #ccc; padding: 20px; border-radius: 8px;}
+.detail-item { margin-bottom: 10px; }
+.detail-item strong { display: inline-block; width: 150px; }
+.hardware-info-block {
+    background: #f4f4f4;
+    border: 1px solid #ddd;
+    padding: 15px;
+    margin-top: 20px;
+    border-radius: 5px;
+    color: #000;
+}
+.hardware-info-block pre {
+    white-space: pre-wrap;
+    word-wrap: break-word;
+}
+.curl-link-box {
+            background: #eef7ff;
+            border: 1px solid #cce5ff;
+            padding: 15px;
+            margin-top: 20px;
+            border-radius000: 5px;
+	    color: #000;
+        }
+        .curl-link-box p {
+            margin: 0;
+            font-size: 0.9em;
+        }
+        .curl-link-box pre {
+            background-color: #f8f9fa;
+            border: 1px solid #dee2e6;
+            padding: 10px;
+            border-radius: 4px;
+            white-space: pre-wrap;
+            word-wrap: break-word;
+            font-family: monospace;
+            font-size: 0.9em;
+            margin-top: 10px;

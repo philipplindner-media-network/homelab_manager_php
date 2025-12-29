@@ -1,0 +1,12 @@
+{
+    "name": "philipp/homelab-manager",
+    "description": "Dein Homelab Manager",
+    "require": {
+        "php": ">=7.4",
+        "chillerlan/php-qrcode": "^5.0",
+        "evilfreelancer/routeros-api-php": "^1.6",
+        "art-of-wifi/unifi-api-client": "^2.0"
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
