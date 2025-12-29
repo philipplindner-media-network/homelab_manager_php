@@ -41,61 +41,38 @@ Schnellstart — Installation
    composer install
    ```
 3. Konfigurationsdatei erstellen:
-   - Kopiere `config/config.example.php` → `config/config.php`
+   - Kopiere `config/config.php` → `config/config.php`
    - Passe DB‑Zugangsdaten, Base‑URL und andere Einstellungen an.
 4. Webserver konfigurieren:
    - DocumentRoot auf das `public/`‑Verzeichnis setzen (oder entsprechend anpassen).
 5. Datenbank (optional):
    - Lege eine Datenbank an und importiere ggf. das Schema aus `db/schema.sql`.
 
-Lokale Abfrage / Python‑Script
-------------------------------
-Das Projekt unterstützt eine optionale lokale Abfrage/Scan, die per Python ausgeführt wird. Beispiel:
 
-- Beispiel‑Pfad (anpassen, falls Datei anders liegt): `scripts/local_query.py`
-- Beispiel: Installation der Python‑Abhängigkeiten
-  ```bash
-  python3 -m venv .venv
-  source .venv/bin/activate
-  pip install -r scripts/requirements.txt
-  ```
-- Beispielaufruf:
-  ```bash
-  python3 scripts/local_query.py --target 192.168.1.1 --type scan
-  ```
-Hinweis: Die tatsächlichen Parameter und der Script‑Name können im Repository variieren. Passe den Pfad und die Optionen an deine Implementierung an.
 
 Konfiguration
 -------------
 - `config/config.example.php` enthält alle konfigurierbaren Parameter.
 - Für Umgebungsvariablen kannst du eine `.env`‑Lösung ergänzen oder die config‑Datei direkt anpassen.
 
-Screenshots / Bilder (Platzhalter)
+Screenshots / Bilder
 ---------------------------------
-Lege deine Screenshots in `docs/images/` ab. Im README verwenden wir Platzhalter‑Bilder:
+Hier eine Par Bilder
 
-- Dashboard (Platzhalter):
-  ![Dashboard Placeholder](./docs/images/dashboard-placeholder.png)
+![Geräte Übesrsicht Placeholder](./docs/images/bild_1.png)
+![Geräte Details Placeholder](./docs/images/bild_2.png)
+![Geräte Abnlegen Placeholder](./docs/images/bild_3.png)
+![Rack Placeholder](./docs/images/bild_4.png)
+![Kabel Placeholder](./docs/images/bild_5.png)
+![Patch Pannel Placeholder](./docs/images/bild_6.png)
+![Netzwerdk Scenn Placeholder](./docs/images/bild_7.png)
+![SpeicherMedium Placeholder](./docs/images/bild_8.png)
+![Suchfunktion 1 Placeholder](./docs/images/bild_9.png)
+![Invebntar Docu Placeholder](./docs/images/bild_10.png)
+![suchfunktion 2 Placeholder](./docs/images/bild_11.png)
+![Suchfunktion 2 einfache Ausgabe Placeholder](./docs/images/bild_12.png)
 
-- Rack‑Übersicht (Platzhalter):
-  ![Racks Placeholder](./docs/images/racks-placeholder.png)
 
-- Verkabelung / Patch‑Panel (Platzhalter):
-  ![Patchpanel Placeholder](./docs/images/patchpanel-placeholder.png)
-
-Online‑Platzhalter (nur Demo):
-- `https://via.placeholder.com/1200x600?text=Dashboard+Placeholder`
-- `https://via.placeholder.com/800x450?text=Racks+Placeholder`
-
-Empfohlene Dateinamen (lokal)
-- docs/images/dashboard-placeholder.png
-- docs/images/racks-placeholder.png
-- docs/images/patchpanel-placeholder.png
-
-Tipps für Bilder
-- Breite: 800–1400 px für volle Breite (Dashboard)
-- Format: PNG oder JPG
-- Seitenverhältnis: 16:9 für Screenshots
 
 Kontribution
 -----------
