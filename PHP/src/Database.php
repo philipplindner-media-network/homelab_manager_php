@@ -1,10 +1,10 @@
 <?php
 class Database {
     // PASSEN SIE DIESE WERTE AN IHRE DATENBANK-KONFIGURATION AN!
-    private $host = '192.168.0.111'; // Oder die IP Ihres Datenbankservers
-    private $user = ' homelab_manager';      // Ihr Datenbankbenutzername
-    private $pass = 'Wo57817I3McfYKJl'; // !!! ERSETZEN SIE DIESES PASSWORT !!!
-    private $dbname = ' homelab_manager'; // Ihr Datenbankname
+    private $host = ''; // Oder die IP Ihres Datenbankservers
+    private $user = '';      // Ihr Datenbankbenutzername
+    private $pass = ''; // !!! ERSETZEN SIE DIESES PASSWORT !!!
+    private $dbname = ''; // Ihr Datenbankname
     
     private $dbh;
     private $error;
